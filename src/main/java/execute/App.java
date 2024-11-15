@@ -25,12 +25,12 @@ public class App {
         petStore.setAddress(address);
 
 
-        em.persist(petStore);
-        em.getTransaction().commit();
+
 
         // Récupérer tous les animaux d'un magasin
         List<Animal> animals = em.createQuery("SELECT a FROM Animal a WHERE a.petStore = :petStore", Animal.class).setParameter("petStore", petStore).getResultList();
-
+        em.persist(petStore);
+        em.getTransaction().commit();
         em.close();
         emf.close();
     }

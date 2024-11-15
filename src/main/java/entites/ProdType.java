@@ -1,8 +1,5 @@
 package entites;
 
-public class ProdType {
-
-    public ProdType(){
-
-    }
+public enum ProdType {
+    FOOD, ACCESSORY, CLEANING
 }

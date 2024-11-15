@@ -1,12 +1,14 @@
 package entites;
 
-import jakarta.persistence.Entity;
+import jakarta.persistence.*;
+
 
 import java.util.Date;
 
 @Entity
 public class Fish extends Animal{
 
+    @Column(name = "LIVING_ENV")
     private FishLivEnv livingEnv;
 
     public Fish() {

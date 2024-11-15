@@ -1,5 +1,6 @@
 package entites;
 
+import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 
 import java.util.Date;
@@ -7,6 +8,7 @@ import java.util.Date;
 @Entity
 public class Cat extends Animal{
 
+    @Column(name = "CHIP_ID")
     private String chipId;
 
     public Cat() {

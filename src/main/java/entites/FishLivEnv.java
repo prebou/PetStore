@@ -1,8 +1,5 @@
 package entites;
 
-public class FishLivEnv {
-
-    public FishLivEnv(){
-
-    }
+public enum FishLivEnv {
+    FRESH_WATER, SEA_WATER
 }
