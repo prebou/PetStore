@@ -26,7 +26,7 @@ public class Product {
     @Column(name = "PRICE")
     private double price;
 
-    @ManyToMany
+    @ManyToMany(cascade = CascadeType.ALL)
     @JoinTable(name = "PROD_PETSTORE", joinColumns = @JoinColumn(name = "ID_PROD", referencedColumnName = "ID"),
     inverseJoinColumns = @JoinColumn(name = "ID_PETSTORE", referencedColumnName = "ID"))
     private Set<PetStore> petStores;

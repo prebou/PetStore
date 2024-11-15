@@ -22,7 +22,7 @@ public class PetStore {
     @ManyToMany(mappedBy = "petStores")
     private Set<Product> products;
 
-    @OneToMany(mappedBy = "petStore")
+    @OneToMany(mappedBy = "petStore",cascade = CascadeType.ALL)
     private Set<Animal> animals;
 
     @OneToOne(cascade = CascadeType.ALL)
